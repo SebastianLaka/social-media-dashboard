@@ -3,9 +3,9 @@
 </script>
 
 <template>
-
+<p>heello</p>
 </template>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+@import './assets/sass/reset.scss';
 </style>
