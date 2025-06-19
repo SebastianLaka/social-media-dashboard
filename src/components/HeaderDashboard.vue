@@ -1,10 +1,11 @@
 <script setup>
-
+import { ref } from 'vue';
+const followersAmount = ref(23.004);
 </script>
 <template>
     <header class="dashboard-header">
         <h1 class="dashboard-header__name">Social Media Dashboard</h1>
-        <p class="dashboard-header__amount-followers"> Total Followers: 23,004</p>
+        <p class="dashboard-header__amount-followers"> Total Followers: {{followersAmount}}</p>
     </header>
     
 </template>
