@@ -1,12 +1,12 @@
 <script setup></script>
 <template>
-  <nav class="theme-area">
+  <div class="theme-area">
     <h1 class="theme-area__header">Dark mode</h1>
     <label class="theme-switch">
       <input class="theme-switch__button" type="checkbox" />
       <span class="switch round"></span>
     </label>
-  </nav>
+  </div>
 </template>
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
@@ -54,6 +54,13 @@
       -ms-transform: translateX(26px);
       transform: translateX(26px);
       background-color: $very-dark-blue;
+    }
+  }
+}
+@media (min-width: 768px){
+  .theme-area{
+    &__header{
+      padding: 0 1em 0 0;
     }
   }
 }
