@@ -1,6 +1,7 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
-    <label class="theme-switch">
+    <label class="theme-switch" >
       <input class="theme-switch__button" type="checkbox" />
       <span class="switch round"></span>
     </label>

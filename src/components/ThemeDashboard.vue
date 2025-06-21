@@ -1,11 +1,14 @@
 <script setup>
-import themeButton from './themeButton.vue';
+import ThemeButton from './themeButton.vue';
+defineProps({
+    isToggle: {type: Boolean, default: false} 
+})
 </script>
 
 <template>
   <div class="theme-area">
     <h1 class="theme-area__header">Dark mode</h1>
-    <themeButton />
+    <ThemeButton :isToggle="isToggle"/>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -13,6 +16,7 @@ import themeButton from './themeButton.vue';
 .theme-area {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em 0.25em;
   &__header {
     color: $dark-grayish-blue;
