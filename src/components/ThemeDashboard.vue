@@ -1,14 +1,15 @@
 <script setup>
 import ThemeButton from './themeButton.vue';
-defineProps({
-    isToggle: {type: Boolean, default: false} 
-})
+import { ref } from 'vue';
+
+const checkValue = ref(false);
+
 </script>
 
 <template>
   <div class="theme-area">
     <h1 class="theme-area__header">Dark mode</h1>
-    <ThemeButton :isToggle="isToggle"/>
+    <ThemeButton v-model:isToggle="checkValue"/>
   </div>
 </template>
 <style lang="scss" scoped>

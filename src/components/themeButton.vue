@@ -1,8 +1,16 @@
 <script setup>
+defineProps({
+    isToggle: {type: Boolean, default: false} 
+})
+const emit = defineEmits(['update:isToggle']);
+const handleChange = (event) => {
+  emit('update:isToggle', event.target.checked);
+};
+
 </script>
 <template>
     <label class="theme-switch" >
-      <input class="theme-switch__button" type="checkbox" />
+      <input class="theme-switch__button" type="checkbox" :checked="isToggle" @change="handleChange"/>
       <span class="switch round"></span>
     </label>
 </template>
