@@ -1,5 +1,5 @@
 <script setup>
-import ThemeButton from './themeButton.vue';
+import ThemeButton from './ThemeButton.vue';
 import { ref } from 'vue';
 
 const checkValue = ref(false);
