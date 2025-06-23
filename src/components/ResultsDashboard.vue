@@ -1,7 +1,10 @@
 <script setup>
 const props = defineProps({
   name: String,
-  src: String,
+  src: {
+    type: String,
+    required: true,
+  },
   alt: String,
   followersAmount: String,
   followers: String,
@@ -10,6 +13,14 @@ const props = defineProps({
     type: String,
     default: 'transparent',
   },
+  growthIcon: {
+    type: String,
+    required: false,
+  },
+  color: {
+    type: String,
+    default: 'transparent',
+  }
 })
 </script>
 <template>
@@ -25,8 +36,9 @@ const props = defineProps({
         <p class="dashboard-followers__followers">{{ props.followers }}</p>
       </div>
       <div class="dashboard-followers-growth">
-        <p class="dashboard-followers-growth__amount">{{ props.amount }}</p>
-        <p class="dashboard-followers-growth__current-day">Today</p>
+        <img :src="props.growthIcon" :alt="props.alt" class="dashboard-followers-growth__icon" />
+        <p class="dashboard-followers-growth__amount" :style="{ color: props.color }">{{ props.amount }}</p>
+        <p class="dashboard-followers-growth__current-day" :style="{ color: props.color }">Today</p>
       </div>
     </div>
   </section>
@@ -50,8 +62,8 @@ const props = defineProps({
       left: 0;
       right: 0;
       height: 0.25em;
-      border-top-left-radius: .2em;
-      border-top-right-radius: .2em;
+      border-top-left-radius: 0.2em;
+      border-top-right-radius: 0.2em;
     }
     .dashboard-name,
     .dashboard-followers-growth {
