@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 const props = defineProps({
   name: String,
   src: {
@@ -6,7 +7,10 @@ const props = defineProps({
     required: true,
   },
   alt: String,
-  followersAmount: String,
+  followersAmount: {
+    type: Number,
+    default: 0
+  },
   followers: String,
   amount: Number,
   borderColor: {
@@ -22,6 +26,14 @@ const props = defineProps({
     default: 'transparent',
   }
 })
+
+const convertAtKValues = computed(() =>{
+   if(props.followersAmount > 10000) {
+     return (props.followersAmount / 1000).toFixed(0) + 'k';
+   }else{
+    return props.followersAmount
+   }
+})
 </script>
 <template>
   <section class="dashboard-results">
@@ -32,12 +44,12 @@ const props = defineProps({
         <p class="dashboard-name__person-name">{{ props.name }}</p>
       </div>
       <div class="dashboard-followers">
-        <p class="dashboard-followers__amount">{{ props.followersAmount }}</p>
+        <p class="dashboard-followers__amount">{{ convertAtKValues }}</p>
         <p class="dashboard-followers__followers">{{ props.followers }}</p>
       </div>
       <div class="dashboard-followers-growth">
         <img :src="props.growthIcon" :alt="props.alt" class="dashboard-followers-growth__icon" />
-        <p class="dashboard-followers-growth__amount" :style="{ color: props.color }">{{ props.amount }}</p>
+        <p class="dashboard-followers-growth__amount" :style="{ color: props.color }" >{{ props.amount}}</p>
         <p class="dashboard-followers-growth__current-day" :style="{ color: props.color }">Today</p>
       </div>
     </div>

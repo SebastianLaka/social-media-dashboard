@@ -10,13 +10,13 @@ import iconUp from '../assets/images/icon-up.svg'
 import iconDown from '../assets/images/icon-down.svg'
 
 
-const resultsDashboardData =[ 
+const resultsDashboardData = [ 
   {
     id: 1,
     name: '@nathanf',
     image: iconFacebook,
     alt: 'Dashboard facebook icon in social media',
-    followersAmount: '1987',
+    followersAmount: 1987,
     unit: 'FOLLOWERS',
     followersCount: 12,
     borderColor: 'hsl(208, 92%, 53%)',
@@ -28,7 +28,7 @@ const resultsDashboardData =[
     name: '@nathanf',
     image: iconTwitter,
     alt: 'Dashboard twitter icon in social media',
-    followersAmount: '1044',
+    followersAmount: 1044,
     unit: 'FOLLOWERS',
     followersCount: 99,
     borderColor: 'hsl(203, 89%, 53%)',
@@ -40,7 +40,7 @@ const resultsDashboardData =[
     name: '@realnathanf',
     image: iconInstagram,
     alt: 'Dashboard facebook instagram in social media',
-    followersAmount: '11k',
+    followersAmount: 11000,
     unit: 'FOLLOWERS',
     followersCount: 1099,
     borderColor: 'linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
@@ -52,7 +52,7 @@ const resultsDashboardData =[
     name: 'Natan F',
     image: iconYoutube,
     alt: 'Dashboard facebook youtube in social media',
-    followersAmount: '8239',
+    followersAmount: 8239,
     unit: 'SUBSCRIBERS',
     followersCount: 144,
     borderColor: 'hsl(348, 97%, 39%)',
@@ -60,6 +60,7 @@ const resultsDashboardData =[
     color: 'hsl(356, 69%, 56%)'
   },
 ]
+
 </script>
 <template>
   <header class="dashboard-header-container wrapper">
