@@ -10,5 +10,6 @@ import MainDashboard from './components/MainDashboard.vue';
 @import "./assets/sass/reset.scss";
 body{
     font-family: "Inter", sans-serif;
+min-height: 100dvh;
 }
 </style>

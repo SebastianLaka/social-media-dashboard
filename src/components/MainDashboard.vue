@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import HeaderDashboard from './HeaderDashboard.vue'
 import ThemeDashboard from './ThemeDashboard.vue'
 import ResultsDashboard from './ResultsDashboard.vue'
@@ -10,7 +11,7 @@ import iconUp from '../assets/images/icon-up.svg'
 import iconDown from '../assets/images/icon-down.svg'
 
 
-const resultsDashboardData = [ 
+const resultsDashboardData = ref([ 
   {
     id: 1,
     name: '@nathanf',
@@ -59,7 +60,7 @@ const resultsDashboardData = [
     growthIcon: iconDown,
     color: 'hsl(356, 69%, 56%)'
   },
-]
+])
 
 </script>
 <template>
@@ -67,6 +68,7 @@ const resultsDashboardData = [
     <HeaderDashboard />
     <ThemeDashboard />
   </header>
+  <section class="results-dashboard-wide-layout wrapper">
   <ResultsDashboard 
   v-for="dashboardResult in resultsDashboardData"
   :key="dashboardResult.id"
@@ -80,6 +82,7 @@ const resultsDashboardData = [
   :growthIcon="dashboardResult.growthIcon"
   :color="dashboardResult.color"
   />
+  </section>
 </template>
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
@@ -92,6 +95,17 @@ const resultsDashboardData = [
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .results-dashboard-wide-layout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
+@media (min-width: 1200px){
+  .results-dashboard-wide-layout{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 const props = defineProps({
   name: String,
   src: {
@@ -9,7 +9,7 @@ const props = defineProps({
   alt: String,
   followersAmount: {
     type: Number,
-    default: 0
+    default: 0,
   },
   followers: String,
   amount: Number,
@@ -24,19 +24,19 @@ const props = defineProps({
   color: {
     type: String,
     default: 'transparent',
-  }
+  },
 })
 
-const convertAtKValues = computed(() =>{
-   if(props.followersAmount > 10000) {
-     return (props.followersAmount / 1000).toFixed(0) + 'k';
-   }else{
+const convertAtKValues = computed(() => {
+  if (props.followersAmount > 10000) {
+    return (props.followersAmount / 1000).toFixed(0) + 'k'
+  } else {
     return props.followersAmount
-   }
+  }
 })
 </script>
 <template>
-  <section class="dashboard-results">
+  <section class="dashboard-results wrapper">
     <div class="dashboard-card">
       <div class="dashboard-card__top-border" :style="{ background: props.borderColor }"></div>
       <div class="dashboard-name">
@@ -49,7 +49,9 @@ const convertAtKValues = computed(() =>{
       </div>
       <div class="dashboard-followers-growth">
         <img :src="props.growthIcon" :alt="props.alt" class="dashboard-followers-growth__icon" />
-        <p class="dashboard-followers-growth__amount" :style="{ color: props.color }" >{{ props.amount}}</p>
+        <p class="dashboard-followers-growth__amount" :style="{ color: props.color }">
+          {{ props.amount }}
+        </p>
         <p class="dashboard-followers-growth__current-day" :style="{ color: props.color }">Today</p>
       </div>
     </div>
@@ -104,6 +106,15 @@ const convertAtKValues = computed(() =>{
         color: changeFontColor($dark-grayish-blue);
         font-size: changeFontSize($primary-font-size);
       }
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 768px) {
+  .dashboard-results {
+    display: flex;
+    justify-content: center;
+    .dashboard-card {
+      width: 75%;
     }
   }
 }
