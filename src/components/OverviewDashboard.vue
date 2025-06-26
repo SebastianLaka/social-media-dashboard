@@ -5,10 +5,11 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  followersCount: Number,
+  alt: String,
+  followersAmount: Number,
   growthIcon: {
     type: String,
-    required: false,
+    required: true,
   },
   growthAmount: Number,
   color: {
@@ -20,6 +21,13 @@ const props = defineProps({
 <template>
   <section class="overview-dashboard">
     <h1 class="overview-dashboard__header">Overview - Today</h1>
+    <div class="overview-dashboard-card">
+        <h2>{{ props.title }}</h2>
+        <img :src="props.src" :alt="props.alt"/>
+        <p>{{ props.followersAmount }}</p>
+        <img :src="props.growthIcon" />
+        <p>{{ props.growthAmount }} %</p>
+    </div>
   </section>
 </template>
 <style lang="scss" scoped>

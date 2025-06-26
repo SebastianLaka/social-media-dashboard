@@ -61,6 +61,17 @@ const resultsDashboardData = ref([
     color: 'hsl(356, 69%, 56%)',
   },
 ])
+const overviewDashboardData = ref([
+  {
+    id: 1,
+    title: 'Page Views',
+    icon: iconFacebook,
+    description: 'Facebook icon',
+    followersAmount: 87,
+    growthIcon: iconUp,
+    color: 'hsl(163, 72%, 41%)',
+  }
+])
 </script>
 <template>
   <header class="dashboard-header-container wrapper">
@@ -81,7 +92,15 @@ const resultsDashboardData = ref([
       :growthIcon="dashboardResult.growthIcon"
       :color="dashboardResult.color"
     />
-    <OverviewDashboard />
+    <OverviewDashboard 
+    v-for="overviewDashboard in overviewDashboardData"
+    :key="overviewDashboard.id"
+    :title="overviewDashboard.title"
+    :src="overviewDashboard.icon"
+    :description="overviewDashboard.description"
+    :followersAmount="overviewDashboard.followersAmount"
+    :growthIcon="overviewDashboard.growthIcon"
+    />
   </main>
 </template>
 <style lang="scss" scoped>
