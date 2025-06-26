@@ -69,6 +69,7 @@ const overviewDashboardData = ref([
     description: 'Facebook icon',
     followersAmount: 87,
     growthIcon: iconUp,
+    growthAmount: 3,
     color: 'hsl(163, 72%, 41%)',
   }
 ])
@@ -99,7 +100,9 @@ const overviewDashboardData = ref([
     :src="overviewDashboard.icon"
     :description="overviewDashboard.description"
     :followersAmount="overviewDashboard.followersAmount"
+    :growthAmount="overviewDashboard.growthAmount"
     :growthIcon="overviewDashboard.growthIcon"
+    :color="overviewDashboard.color"
     />
   </main>
 </template>

@@ -22,11 +22,13 @@ const props = defineProps({
   <section class="overview-dashboard">
     <h1 class="overview-dashboard__header">Overview - Today</h1>
     <div class="overview-dashboard-card">
-        <h2>{{ props.title }}</h2>
-        <img :src="props.src" :alt="props.alt"/>
-        <p>{{ props.followersAmount }}</p>
+      <h2 class="overview-dashboard-card__title">{{ props.title }}</h2>
+      <img class="overview-dashboard-card__icon" :src="props.src" :alt="props.alt" />
+      <p class="overview-dashboard-card__amount">{{ props.followersAmount }}</p>
+      <div class="overview-dashboard-growth">
         <img :src="props.growthIcon" />
-        <p>{{ props.growthAmount }} %</p>
+        <p :style="{ color: props.color }">{{ props.growthAmount }}%</p>
+      </div>
     </div>
   </section>
 </template>
@@ -39,6 +41,28 @@ const props = defineProps({
     font-weight: changeFontWeight($bold-font-weight);
     color: changeFontColor($dark-grayish-blue);
     font-size: changeFontSize(1.75rem);
+  }
+  .overview-dashboard-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 1.75em;
+    &__title{
+        color: changeFontColor($dark-grayish-blue);
+    }
+    &__icon{
+         justify-self: end;
+    }
+    &__amount{
+        font-weight: changeFontWeight($bold-font-weight);
+        font-size: changeFontSize(2.25rem);
+    }
+    .overview-dashboard-growth{
+        display: flex;
+        align-items: center;
+        gap: 0 .25em;
+        justify-self: end;
+    }
   }
 }
 </style>
