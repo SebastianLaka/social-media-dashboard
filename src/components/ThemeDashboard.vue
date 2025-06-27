@@ -3,7 +3,6 @@ import ThemeButton from './ThemeButton.vue';
 import { ref } from 'vue';
 
 const checkValue = ref(false);
-
 </script>
 
 <template>
@@ -12,6 +11,7 @@ const checkValue = ref(false);
     <ThemeButton v-model:isToggle="checkValue"/>
   </div>
 </template>
+
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
 .theme-area {

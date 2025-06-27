@@ -126,6 +126,9 @@ const overviewDashboardData = ref([
   align-items: center;
 }
 @media (min-width: 768px) {
+  .overview-dashboard-header {
+    padding: 1em .1em;
+  }
   .overview-dashboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,6 +142,7 @@ const overviewDashboardData = ref([
   .overview-dashboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 0;
   }
 }
 </style>
