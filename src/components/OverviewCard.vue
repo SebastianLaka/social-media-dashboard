@@ -44,7 +44,8 @@ const convertAtKValues = computed(() => {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  padding: 2.5em 1.75em;
+  padding: 1em;
+  gap: .5em;
   &__title {
     color: changeFontColor($dark-grayish-blue);
   }

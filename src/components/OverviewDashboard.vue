@@ -113,7 +113,7 @@ const overviewDashboardData = ref([
   font-weight: changeFontWeight($bold-font-weight);
   color: changeFontColor($dark-grayish-blue);
   font-size: changeFontSize(1.75rem);
-  padding: 0 0.25em;
+  padding: 1em 0.25em;
 }
 .overview-dashboard {
   padding: 0 0.25em;
@@ -133,6 +133,9 @@ const overviewDashboardData = ref([
   }
 }
 @media (min-width: 1200px) {
+  .overview-dashboard-header {
+    padding: 1em 0;
+  }
   .overview-dashboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
