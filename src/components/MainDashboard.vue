@@ -14,13 +14,61 @@ import OverviewDashboard from './OverviewDashboard.vue'
     <OverviewDashboard />
   </main>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/wrapper.scss';
+
+html.dark {
+  background-color: $very-dark-blue;
+  .dashboard-header {
+    &__name {
+      color: $dark-white;
+    }
+    &__amount-followers {
+      color: $dark-desaturated-blue-text;
+    }
+  }
+  .theme-area {
+    &__header {
+      color: $dark-white;
+    }
+    .theme-switch {
+      &__button {
+        color: $dark-desaturated-blue-text;
+      }
+    }
+  }
+  .dashboard-card {
+    background-color: $dark-desaturated-blue;
+    .dashboard-name {
+      &__person-name {
+        color: $dark-desaturated-blue-text;
+      }
+    }
+    .dashboard-followers {
+      &__amount {
+        color: $dark-white;
+      }
+    }
+  }
+  .overview-dashboard-header{
+    color: $dark-white;
+  }
+  .overview-dashboard-card {
+    background-color: $dark-desaturated-blue;
+    &__title {
+      color: $dark-desaturated-blue-text;
+    }
+    &__amount{
+      color: $dark-white;
+    }
+  }
+}
+
 .dashboard-header-container {
   padding-bottom: 1em;
 }
-.results-dashboard-wide-layout{
+.results-dashboard-wide-layout {
   display: flex;
   flex-direction: column;
 }

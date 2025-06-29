@@ -11,5 +11,7 @@ import MainDashboard from './components/MainDashboard.vue'
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100dvh;
+  
 }
+
 </style>

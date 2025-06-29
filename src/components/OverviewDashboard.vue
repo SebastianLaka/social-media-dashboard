@@ -119,6 +119,7 @@ const overviewDashboardData = ref([
   padding: 0 0.25em;
   display: flex;
   flex-direction: column;
+   gap: 2em;
 }
 .overview-dashboard {
   display: flex;

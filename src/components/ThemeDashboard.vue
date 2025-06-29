@@ -1,14 +1,16 @@
 <script setup>
 import ThemeButton from './ThemeButton.vue';
-import { ref } from 'vue';
 
-const checkValue = ref(false);
+import { useDark } from '@vueuse/core'
+
+const isDark = useDark({ disableTransition: false });
+
 </script>
 
 <template>
   <div class="theme-area">
     <h1 class="theme-area__header">Dark mode</h1>
-    <ThemeButton v-model:isToggle="checkValue"/>
+    <ThemeButton v-model:isToggle="isDark" :isDark="isDark" />
   </div>
 </template>
 
