@@ -17,12 +17,13 @@ import OverviewDashboard from './OverviewDashboard.vue'
 <style lang="scss">
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/wrapper.scss';
-body{
+@import "../assets/sass/mixins.scss";
+body {
   padding: 3em 0;
 }
 
 html.dark {
-  background-color:changeBackgroundColor($very-dark-blue-top-bg);
+  background-color: changeBackgroundColor($very-dark-blue-top-bg);
   .dashboard-header {
     &__name {
       color: changeFontColor($dark-white);
@@ -54,7 +55,7 @@ html.dark {
       }
     }
   }
-  .overview-dashboard-header{
+  .overview-dashboard-header {
     color: changeFontColor($dark-white);
   }
   .overview-dashboard-card {
@@ -62,7 +63,7 @@ html.dark {
     &__title {
       color: changeFontColor($dark-desaturated-blue-text);
     }
-    &__amount{
+    &__amount {
       color: changeFontColor($dark-white);
     }
   }
@@ -71,14 +72,12 @@ html.dark {
   padding-bottom: 1em;
 }
 .results-dashboard-wide-layout {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 }
 @media (min-width: 768px) {
   .dashboard-header-container {
-    display: flex;
+    @include flex-align-center;
     justify-content: space-between;
-    align-items: center;
   }
 }
 </style>

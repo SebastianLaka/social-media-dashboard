@@ -61,8 +61,8 @@ const resultsDashboardData = ref([
 </script>
 <template>
   <section class="dashboard-results wrapper">
-    <ResultsCard 
-    v-for="dashboardResult in resultsDashboardData"
+    <ResultsCard
+      v-for="dashboardResult in resultsDashboardData"
       :key="dashboardResult.id"
       :name="dashboardResult.name"
       :src="dashboardResult.image"
@@ -79,31 +79,27 @@ const resultsDashboardData = ref([
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/fonts.scss';
+@import '../assets/sass/mixins.scss';
 .dashboard-results {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0.25em;
   gap: 2em;
 }
 @media (min-width: 350px) and (max-width: 768px) {
   .dashboard-results {
     display: flex;
-    
   }
 }
-@media (min-width: 768px){
-  .dashboard-results{
-     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) {
+  .dashboard-results {
+    @include grid-two-columns;
     gap: 2em;
   }
 }
 @media (min-width: 1200px) {
   .dashboard-results {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include grid-four-columns;
   }
 }
 </style>

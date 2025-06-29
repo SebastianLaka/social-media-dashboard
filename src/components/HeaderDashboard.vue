@@ -18,9 +18,9 @@ const followersAmount = ref(23.004)
     font-size: 1.75rem;
   }
   &__amount-followers {
-    font-size: $primary-font-size;
-    font-weight: $bold-font-weight;
-    color: $dark-grayish-blue;
+    font-size: changeFontSize($primary-font-size);
+    font-weight: changeFontWeight($bold-font-weight);
+    color: changeFontColor($dark-grayish-blue);
   }
 }
 @media (min-width: 768px) {

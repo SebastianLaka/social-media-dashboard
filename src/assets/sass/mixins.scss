@@ -1,0 +1,21 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+}
+@mixin grid-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@mixin grid-four-columns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

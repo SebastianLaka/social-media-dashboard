@@ -58,16 +58,16 @@ const convertAtKValues = computed(() => {
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/fonts.scss';
+@import "../assets/sass/mixins.scss";
 .dashboard-card {
   position: relative;
   border-radius: 0.2em;
-  display: flex;
+  @include flex-align-center;
   flex-direction: column;
-  align-items: center;
   gap: 1em 0;
   padding: 2em 0;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   &__top-border {
     position: absolute;
     top: 0;
@@ -79,8 +79,7 @@ const convertAtKValues = computed(() => {
   }
   .dashboard-name,
   .dashboard-followers-growth {
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
     gap: 0 0.2em;
     &__person-name {
       font-weight: changeFontWeight($bold-font-weight);
@@ -92,9 +91,8 @@ const convertAtKValues = computed(() => {
     }
   }
   .dashboard-followers {
-    display: flex;
+    @include flex-align-center;
     flex-direction: column;
-    align-items: center;
     &__amount {
       font-size: changeFontSize(3.5rem);
       font-weight: changeFontWeight($bold-font-weight);
@@ -106,7 +104,7 @@ const convertAtKValues = computed(() => {
     }
   }
 }
-.dashboard-card:hover{
+.dashboard-card:hover {
   background-color: $dark-grayish-blue;
 }
 @media (min-width: 0px) and (max-width: 768px) {

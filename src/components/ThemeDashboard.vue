@@ -16,10 +16,10 @@ const isDark = useDark({ disableTransition: false });
 
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
+@import "../assets/sass/mixins.scss";
 .theme-area {
-  display: flex;
+  @include flex-align-center;
   justify-content: space-between;
-  align-items: center;
   padding: 1em 0.25em;
   &__header {
     color: $dark-grayish-blue;

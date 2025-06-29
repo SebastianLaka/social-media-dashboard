@@ -109,6 +109,7 @@ const overviewDashboardData = ref([
 <style lang="scss" scoped>
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/fonts.scss';
+@import "../assets/sass/mixins.scss";
 .overview-dashboard-header {
   font-weight: changeFontWeight($bold-font-weight);
   color: changeFontColor($dark-grayish-blue);
@@ -116,23 +117,19 @@ const overviewDashboardData = ref([
   padding: 1em 0.25em;
 }
 .overview-dashboard {
+  @include flex-column;
   padding: 0 0.25em;
-  display: flex;
-  flex-direction: column;
    gap: 2em;
 }
 .overview-dashboard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 }
 @media (min-width: 768px) {
   .overview-dashboard-header {
     padding: 1em .1em;
   }
   .overview-dashboard {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid-two-columns;
     gap: 2em;
   }
 }
@@ -141,8 +138,7 @@ const overviewDashboardData = ref([
     padding: 1em 0;
   }
   .overview-dashboard {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  @include grid-four-columns;
     padding: 0;
   }
 }
