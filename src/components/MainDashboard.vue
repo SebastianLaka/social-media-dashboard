@@ -3,6 +3,7 @@ import HeaderDashboard from './HeaderDashboard.vue'
 import ThemeDashboard from './ThemeDashboard.vue'
 import ResultsDashboard from './ResultsDashboard.vue'
 import OverviewDashboard from './OverviewDashboard.vue'
+import FooterDashboard from './FooterDashboard.vue'
 </script>
 <template>
   <header class="dashboard-header-container wrapper">
@@ -13,15 +14,18 @@ import OverviewDashboard from './OverviewDashboard.vue'
     <ResultsDashboard />
     <OverviewDashboard />
   </main>
+  <footer>
+    <FooterDashboard/>
+  </footer>
+  
 </template>
 <style lang="scss">
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/wrapper.scss';
 @import "../assets/sass/mixins.scss";
 body {
-  padding: 3em 0;
+  padding: 2em 0;
 }
-
 html.dark {
   background-color: changeBackgroundColor($very-dark-blue-top-bg);
   .dashboard-header {
@@ -67,6 +71,7 @@ html.dark {
       color: changeFontColor($dark-white);
     }
   }
+
 }
 .dashboard-header-container {
   padding-bottom: 1em;
