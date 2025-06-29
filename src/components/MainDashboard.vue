@@ -19,7 +19,7 @@ import OverviewDashboard from './OverviewDashboard.vue'
 @import '../assets/sass/wrapper.scss';
 
 html.dark {
-  background-color: $very-dark-blue;
+  background-color: $very-dark-blue-top-bg;
   .dashboard-header {
     &__name {
       color: $dark-white;

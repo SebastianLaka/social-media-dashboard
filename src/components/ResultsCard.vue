@@ -66,6 +66,7 @@ const convertAtKValues = computed(() => {
   align-items: center;
   gap: 1em 0;
   padding: 2em 0;
+  cursor: pointer;
   &__top-border {
     position: absolute;
     top: 0;
