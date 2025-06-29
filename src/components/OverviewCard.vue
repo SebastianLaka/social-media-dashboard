@@ -46,7 +46,9 @@ const convertAtKValues = computed(() => {
   grid-template-rows: repeat(2, 1fr);
   padding: 1em;
   gap: .5em;
+  border-radius: 0.2em;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
   &__title {
     color: changeFontColor($dark-grayish-blue);
   }
@@ -66,6 +68,9 @@ const convertAtKValues = computed(() => {
         font-weight: changeFontWeight($bold-font-weight);
     }
   }
+}
+.overview-dashboard-card:hover{
+  background-color: $dark-grayish-blue;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .overview-dashboard-card {

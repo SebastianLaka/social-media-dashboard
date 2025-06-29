@@ -20,3 +20,6 @@ $very-dark-blue-bg: hsl(230, 17%, 14%);
 @function changeFontColor($color) {
     @return $color;
   }
+@function changeBackgroundColor($backgroundColor){
+  @return $backgroundColor;
+}

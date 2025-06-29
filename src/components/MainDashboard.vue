@@ -17,24 +17,27 @@ import OverviewDashboard from './OverviewDashboard.vue'
 <style lang="scss">
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/wrapper.scss';
+body{
+  padding: 3em 0;
+}
 
 html.dark {
-  background-color: $very-dark-blue-top-bg;
+  background-color:changeBackgroundColor($very-dark-blue-top-bg);
   .dashboard-header {
     &__name {
-      color: $dark-white;
+      color: changeFontColor($dark-white);
     }
     &__amount-followers {
-      color: $dark-desaturated-blue-text;
+      color: changeFontColor($dark-desaturated-blue-text);
     }
   }
   .theme-area {
     &__header {
-      color: $dark-white;
+      color: changeFontColor($dark-white);
     }
     .theme-switch {
       &__button {
-        color: $dark-desaturated-blue-text;
+        color: changeFontColor($dark-desaturated-blue-text);
       }
     }
   }
@@ -42,29 +45,28 @@ html.dark {
     background-color: $dark-desaturated-blue;
     .dashboard-name {
       &__person-name {
-        color: $dark-desaturated-blue-text;
+        color: changeFontColor($dark-desaturated-blue-text);
       }
     }
     .dashboard-followers {
       &__amount {
-        color: $dark-white;
+        color: changeFontColor($dark-white);
       }
     }
   }
   .overview-dashboard-header{
-    color: $dark-white;
+    color: changeFontColor($dark-white);
   }
   .overview-dashboard-card {
-    background-color: $dark-desaturated-blue;
+    background-color: changeBackgroundColor($dark-desaturated-blue);
     &__title {
-      color: $dark-desaturated-blue-text;
+      color: changeFontColor($dark-desaturated-blue-text);
     }
     &__amount{
-      color: $dark-white;
+      color: changeFontColor($dark-white);
     }
   }
 }
-
 .dashboard-header-container {
   padding-bottom: 1em;
 }

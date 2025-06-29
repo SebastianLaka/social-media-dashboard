@@ -67,6 +67,7 @@ const convertAtKValues = computed(() => {
   gap: 1em 0;
   padding: 2em 0;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
   &__top-border {
     position: absolute;
     top: 0;
@@ -104,6 +105,9 @@ const convertAtKValues = computed(() => {
       font-size: changeFontSize($primary-font-size);
     }
   }
+}
+.dashboard-card:hover{
+  background-color: $dark-grayish-blue;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .dashboard-card {
