@@ -105,7 +105,7 @@ const convertAtKValues = computed(() => {
   }
 }
 .dashboard-card:hover {
-  background-color: $dark-grayish-blue;
+  background-color: changeBackgroundColor($toggle-light-theme);;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .dashboard-card {
