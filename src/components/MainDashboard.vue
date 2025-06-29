@@ -15,14 +15,13 @@ import FooterDashboard from './FooterDashboard.vue'
     <OverviewDashboard />
   </main>
   <footer>
-    <FooterDashboard/>
+    <FooterDashboard />
   </footer>
-  
 </template>
 <style lang="scss">
 @import '../assets/sass/colors.scss';
 @import '../assets/sass/wrapper.scss';
-@import "../assets/sass/mixins.scss";
+@import '../assets/sass/mixins.scss';
 body {
   padding: 2em 0;
 }
@@ -72,6 +71,10 @@ html.dark {
     }
   }
 
+  .dashboard-card:hover, .overview-dashboard-card:hover {
+    background-color: changeBackgroundColor($dark-grayish-blue);
+  }
+  
 }
 .dashboard-header-container {
   padding-bottom: 1em;
