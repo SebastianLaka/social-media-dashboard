@@ -1,7 +1,8 @@
 <template>
   <footer class="footer">
     <p class="footer__description">
-      Challenge by Frontend Mentor. Coded by <span class="footer__description--name">SebastianLaka</span>
+      Challenge by Frontend Mentor. Coded by
+      <span class="footer__description--name">SebastianLaka</span>
     </p>
   </footer>
 </template>
@@ -15,11 +16,10 @@
   padding-top: 1em;
   width: 100%;
   &__description {
-    color: $dark-grayish-blue;
+    color: changeFontColor($dark-grayish-blue);
     padding: 1em;
-    &--name{
-        
-        color: $very-dark-blue;
+    &--name {
+      color: changeFontColor($very-dark-blue);
     }
   }
 }

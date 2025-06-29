@@ -71,10 +71,18 @@ html.dark {
     }
   }
 
-  .dashboard-card:hover, .overview-dashboard-card:hover {
+  .dashboard-card:hover,
+  .overview-dashboard-card:hover {
     background-color: changeBackgroundColor($dark-grayish-blue);
   }
-  
+  .footer {
+    &__description {
+      color: changeFontColor($dark-grayish-blue);
+      &--name {
+        color: changeFontColor($dark-white);
+      }
+    }
+  }
 }
 .dashboard-header-container {
   padding-bottom: 1em;
