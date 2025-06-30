@@ -1,5 +1,5 @@
 <script setup>
-import ThemeButton from './ThemeButton.vue';
+import ThemeButton from './hemeButton.vue';
 import { useDark } from '@vueuse/core'
 
 const isDark = useDark({ disableTransition: false });
