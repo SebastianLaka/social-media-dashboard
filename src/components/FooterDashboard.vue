@@ -13,7 +13,7 @@
 .footer {
   @include flex-align-center;
   justify-content: center;
-  padding-top: 1em;
+  padding-top: .75em;
   width: 100%;
   &__description {
     color: changeFontColor($dark-grayish-blue);
